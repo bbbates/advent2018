@@ -1,10 +1,7 @@
 extern crate reqwest;
 
-use std::result::Result::Ok;
 use std::str::FromStr;
 use std::num::ParseIntError;
-use std::error::Error;
-
 
 fn split_frequencies(freqs: &String) -> Vec<&str> {
     freqs.split('\n')
@@ -16,16 +13,7 @@ fn to_i(freq: &str) -> Result<i32, ParseIntError> {
     i32::from_str(freq.trim())
 }
 
-fn fetch_input(pwd: &str) -> Result<String, Box<Error>> {
-    let client = reqwest::Client::new();
-    Ok(client.get("https://adventofcode.com/2018/day/1/input")
-        .header("Cookie", format!("session={}", pwd))
-        .send()?
-        .text()?)
-}
-
-pub fn solve(pwd: &str) -> String {
-    let input = fetch_input(pwd).expect("Could not fetch frequencies!");
+pub fn solve(input: &String) -> String {
     let result: i32  = split_frequencies(&input)
         .iter()
         .filter(|f| !f.is_empty())
@@ -63,3 +51,5 @@ mod sum_freq_acceptance_tests {
         assert_eq!(apply_freq_changes(0, vec![-1, -2, -3]), -6);
     }
 }
+
+
