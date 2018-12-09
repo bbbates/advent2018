@@ -1,25 +1,39 @@
-//extern crate hyper;
-//
-//use std::io::{self, Write};
-//use hyper::Client;
-//use hyper::rt::{self, Future, Stream};
-//
+extern crate reqwest;
 
 use std::result::Result::Ok;
+use std::str::FromStr;
 use std::num::ParseIntError;
+use std::error::Error;
+
 
 fn split_frequencies(freqs: &String) -> Vec<&str> {
-    freqs.split('\n').collect()
+    freqs.split('\n')
+        .map(|f| f.trim())
+        .collect()
 }
 
-fn to_i(freq: &str) -> Result<i16, ParseIntError> {
-//    i16::from_str(freq.trim())
-    Ok(0)
+fn to_i(freq: &str) -> Result<i32, ParseIntError> {
+    i32::from_str(freq.trim())
 }
 
-fn apply_freq_changes(starting_freq: i16, freqs: Vec<i16>) -> i16 {
-    freqs.iter().fold(starting_freq, |acc, f| acc + f)
+fn fetch_input(pwd: &str) -> Result<String, Box<Error>> {
+    let client = reqwest::Client::new();
+    Ok(client.get("https://adventofcode.com/2018/day/1/input")
+        .header("Cookie", format!("session={}", pwd))
+        .send()?
+        .text()?)
 }
+
+pub fn solve(pwd: &str) -> String {
+    let input = fetch_input(pwd).expect("Could not fetch frequencies!");
+    let result: i32  = split_frequencies(&input)
+        .iter()
+        .filter(|f| !f.is_empty())
+        .map(|f| to_i(*f).expect("Could not parse {}"))
+        .sum();
+    format!("{}", result)
+}
+
 
 #[cfg(test)]
 mod split_freqs_tests {

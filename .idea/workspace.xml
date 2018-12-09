@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e4d104c-a3ee-4859-aeb1-6cafe8cd194e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day01.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day01.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/day01.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,12 +28,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding>
-                <element signature="e#23#24#0" expanded="true" />
-                <element signature="e#56#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cargo.toml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -42,8 +46,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day01.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+            <state relative-caret-position="570">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#308#309#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +71,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main.rs" />
         <option value="$PROJECT_DIR$/Cargo.toml" />
+        <option value="$PROJECT_DIR$/src/main.rs" />
         <option value="$PROJECT_DIR$/src/day01.rs" />
       </list>
     </option>
@@ -144,9 +152,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day01::split_freqs_tests::split_frequencies_for_mult_freqs" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day01::split_freqs_tests::split_frequencies_for_one_freq" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day01::split_freqs_tests::split_frequencies_for_mult_freqs -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day01::split_freqs_tests::split_frequencies_for_one_freq -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -211,10 +219,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cargo Command.Test day01" />
+        <item itemvalue="Cargo Command.Test split_freqs_tests" />
+        <item itemvalue="Cargo Command.Test day01::split_freqs_tests::split_frequencies_for_one_freq" />
         <item itemvalue="Cargo Command.Test day01::sum_freq_acceptance_tests::starting_from_freq_zero" />
         <item itemvalue="Cargo Command.Test sum_freq_acceptance_tests" />
-        <item itemvalue="Cargo Command.Test split_freqs_tests" />
-        <item itemvalue="Cargo Command.Test day01::split_freqs_tests::split_frequencies_for_mult_freqs" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +246,7 @@
       <workItem from="1543718227241" duration="142000" />
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
-      <workItem from="1544322539333" duration="1616000" />
+      <workItem from="1544322539333" duration="7560000" />
     </task>
     <servers />
   </component>
@@ -264,22 +272,31 @@
     <history-entry file="Test_day01 - 2018.12.09 at 20h 27m 59s.xml">
       <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_day01__sum_freq_acceptance_tests__starting_from_freq_zero - 2018.12.09 at 20h 29m 32s.xml">
+      <configuration name="Test day01::sum_freq_acceptance_tests::starting_from_freq_zero" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_split_freqs_tests - 2018.12.09 at 21h 11m 14s.xml">
+      <configuration name="Test split_freqs_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day01 - 2018.12.09 at 21h 43m 54s.xml">
+      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4836000" />
+    <option name="totallyTimeSpent" value="10780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="981" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -297,7 +314,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="PlantUML" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Cargo" order="6" visible="true" weight="0.32967034" />
+      <window_info anchor="right" id="Cargo" order="6" weight="0.32967034" />
       <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Leiningen" order="9" />
@@ -311,26 +328,26 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Cargo.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="114">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#23#24#0" expanded="true" />
-            <element signature="e#56#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="304">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day01.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+        <state relative-caret-position="570">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

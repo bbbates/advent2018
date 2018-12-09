@@ -4,5 +4,5 @@ version = "0.1.0"
 authors = ["Brendan Bates <batesbrendan@gmail.com>"]
 
 [dependencies]
-hyper = "0.12" # for http
+reqwest = "0.9.5"
 
