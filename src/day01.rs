@@ -2,6 +2,7 @@ extern crate reqwest;
 
 use std::str::FromStr;
 use std::num::ParseIntError;
+use std::collections::HashSet;
 
 fn split_frequencies(freqs: &String) -> Vec<&str> {
     freqs.split('\n')
@@ -22,6 +23,29 @@ pub fn solve(input: &String) -> String {
     format!("{}", result)
 }
 
+pub fn solve_part_two(input: &String) -> String {
+    let mut seen: HashSet<i32> = HashSet::new();
+    let first_match = split_frequencies(&input)
+        .iter()
+        .filter(|f| !f.is_empty())
+        .map(|f| to_i(*f).expect("Could not parse {}"))
+        .cycle()
+        .try_fold(0,
+                  |acc, f| {
+                      if seen.contains(&(f + acc)) {
+                          Err(f + acc)
+                      } else {
+                          seen.insert(f + acc);
+                          Ok(f+acc)
+                      }
+                  });
+    match first_match {
+        Ok(_) => "Not found!".to_string(),
+        Err(x) => x.to_string()
+    }
+
+}
+
 
 #[cfg(test)]
 mod split_freqs_tests {
@@ -40,15 +64,15 @@ mod split_freqs_tests {
 }
 
 #[cfg(test)]
-mod sum_freq_acceptance_tests {
+mod first_frequency_reaches_twice_tests {
     use super::*;
 
     #[test]
-    fn starting_from_freq_zero() {
-        assert_eq!(apply_freq_changes(0, vec![1, -2, 3, 1]), 3);
-        assert_eq!(apply_freq_changes(0, vec![1, 1, 1]), 3);
-        assert_eq!(apply_freq_changes(0, vec![1, 1, -2]), 0);
-        assert_eq!(apply_freq_changes(0, vec![-1, -2, -3]), -6);
+    fn example_test() {
+        assert_eq!(solve_part_two(&String::from("+1\n-2\n+3\n+1")), "2");
+        assert_eq!(solve_part_two(&String::from("+3\n+3\n+4\n-2\n-4")), "10");
+        assert_eq!(solve_part_two(&String::from("-6\n+3\n+8\n+5\n-6")), "5");
+        assert_eq!(solve_part_two(&String::from("+7\n+7\n-2\n-7\n-4")), "14");
     }
 }
 
