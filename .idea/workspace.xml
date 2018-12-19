@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e4d104c-a3ee-4859-aeb1-6cafe8cd194e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/day02.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day01.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/day01.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
@@ -22,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="114">
+              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -34,12 +36,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day01.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-              <folding>
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#308#309#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/day02.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/iter/iterator.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="620" column="11" selection-start-line="620" selection-start-column="11" selection-end-line="620" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/iter/mod.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="1484" column="11" selection-start-line="1484" selection-start-column="11" selection-end-line="1484" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -61,14 +86,16 @@
       <list>
         <option value="$PROJECT_DIR$/Cargo.toml" />
         <option value="$PROJECT_DIR$/src/fetch.rs" />
-        <option value="$PROJECT_DIR$/src/day01.rs" />
+        <option value="$PROJECT_DIR$/src/day02.r.rs" />
         <option value="$PROJECT_DIR$/src/main.rs" />
+        <option value="$PROJECT_DIR$/src/day01.rs" />
+        <option value="$PROJECT_DIR$/src/day02.rs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
+    <option name="width" value="1920" />
     <option name="height" value="981" />
   </component>
   <component name="ProjectView">
@@ -76,6 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,8 +121,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -117,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Test day01">
+  <component name="RunManager" selected="Cargo Command.Test day02">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -130,6 +157,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test count_repeats_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02::count_repeats_test" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="Test day01" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="test --package advent2018 --bin advent2018 day01" />
@@ -140,9 +177,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day01::first_frequency_reaches_twice_tests::example_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day02" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day01::first_frequency_reaches_twice_tests::example_test -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -150,9 +187,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day01::split_freqs_tests::split_frequencies_for_one_freq" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day02::count_repeats_test::all_unique_letters_should_give_zero_result" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day01::split_freqs_tests::split_frequencies_for_one_freq -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02::count_repeats_test::all_unique_letters_should_give_zero_result -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -160,19 +197,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day01::sum_freq_acceptance_tests::starting_from_freq_zero" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day02::count_repeats_test::single_letter_repeated_twice_returns_single_result" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day01::sum_freq_acceptance_tests::starting_from_freq_zero -- --exact" />
-      <option name="allFeatures" value="false" />
-      <option name="nocapture" value="false" />
-      <option name="backtrace" value="SHORT" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test split_freqs_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day01::split_freqs_tests" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02::count_repeats_test::single_letter_repeated_twice_returns_single_result -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -206,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo Command.Test day02" />
+        <item itemvalue="Cargo Command.Test day02::count_repeats_test::single_letter_repeated_twice_returns_single_result" />
+        <item itemvalue="Cargo Command.Test count_repeats_test" />
+        <item itemvalue="Cargo Command.Test day02::count_repeats_test::all_unique_letters_should_give_zero_result" />
         <item itemvalue="Cargo Command.Test day01" />
-        <item itemvalue="Cargo Command.Test day01::first_frequency_reaches_twice_tests::example_test" />
-        <item itemvalue="Cargo Command.Test split_freqs_tests" />
-        <item itemvalue="Cargo Command.Test day01::split_freqs_tests::split_frequencies_for_one_freq" />
-        <item itemvalue="Cargo Command.Test day01::sum_freq_acceptance_tests::starting_from_freq_zero" />
       </list>
     </recent_temporary>
   </component>
@@ -234,32 +261,12 @@
       <workItem from="1543718227241" duration="142000" />
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
-      <workItem from="1544322539333" duration="13414000" />
+      <workItem from="1544322539333" duration="14725000" />
+      <workItem from="1545124547227" duration="17136000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day01__sum_freq_acceptance_tests__starting_from_freq_zero - 2018.12.09 at 20h 29m 32s.xml">
-      <configuration name="Test day01::sum_freq_acceptance_tests::starting_from_freq_zero" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_split_freqs_tests - 2018.12.09 at 21h 11m 14s.xml">
-      <configuration name="Test split_freqs_tests" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day01 - 2018.12.09 at 21h 43m 54s.xml">
-      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day01 - 2018.12.10 at 22h 06m 23s.xml">
-      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day01 - 2018.12.10 at 22h 06m 35s.xml">
-      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day01 - 2018.12.10 at 23h 09m 13s.xml">
-      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day01 - 2018.12.10 at 23h 16m 39s.xml">
-      <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_day01 - 2018.12.10 at 23h 16m 52s.xml">
       <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -269,22 +276,43 @@
     <history-entry file="Test_day01 - 2018.12.10 at 23h 19m 24s.xml">
       <configuration name="Test day01" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_day02 - 2018.12.18 at 21h 10m 46s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_count_repeats_test - 2018.12.18 at 21h 11m 03s.xml">
+      <configuration name="Test count_repeats_test" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02__count_repeats_test__single_letter_repeated_twice_returns_single_result - 2018.12.18 at 21h 12m 23s.xml">
+      <configuration name="Test day02::count_repeats_test::single_letter_repeated_twice_returns_single_result" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.19 at 22h 44m 16s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.19 at 22h 46m 26s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.19 at 22h 47m 49s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.19 at 22h 49m 48s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16634000" />
+    <option name="totallyTimeSpent" value="35081000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="981" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="981" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22832723" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2857143" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3456925" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -321,6 +349,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/day02.r.rs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fetch.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -328,21 +359,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day01.rs">
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.rs">
+    <entry file="file://$PROJECT_DIR$/src/day01.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="205">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/iter/mod.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="1484" column="11" selection-start-line="1484" selection-start-column="11" selection-end-line="1484" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/iter/iterator.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="620" column="11" selection-start-line="620" selection-start-column="11" selection-end-line="620" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day02.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
     </entry>

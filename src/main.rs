@@ -1,7 +1,10 @@
+extern crate core;
+
 use std::env;
 
 mod fetch;
 mod day01;
+mod day02;
 
 fn main() {
     eprintln!("\n*** Advent 2018 w/ Rust Bootstrap and Solver Tool ***");

@@ -1,5 +1,3 @@
-extern crate reqwest;
-
 use std::str::FromStr;
 use std::num::ParseIntError;
 use std::collections::HashSet;
