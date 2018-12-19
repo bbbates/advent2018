@@ -20,8 +20,10 @@ fn main() {
 
     let problem_input = fetch::input_for_day(&sess, day_input).expect("Error fetching input for problem!");
 
+
+
     if day_part_input == "1" {
-        println!("{}", day01::solve(&problem_input));
+        println!("{}", day02::solve_part_one(&problem_input));
     } else {
         println!("{}", day01::solve_part_two(&problem_input));
     }

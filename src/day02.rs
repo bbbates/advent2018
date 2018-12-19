@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-fn count_repeats(input: &str) -> (i8, i8) {
+fn count_repeats(input: &str) -> (i32, i32) {
     let mut char_counts: HashMap<char,i8> = HashMap::new();
     for c in input.chars() {
         let v = char_counts.get(&c).unwrap_or(&0) + 1;
@@ -10,7 +10,7 @@ fn count_repeats(input: &str) -> (i8, i8) {
     let has_twos = char_counts.values().any(|v| *v == 2);
     let has_threes = char_counts.values().any(|v| *v == 3);
 
-    (has_twos as i8, has_threes as i8)
+    (has_twos as i32, has_threes as i32)
 }
 
 
