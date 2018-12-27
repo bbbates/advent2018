@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e4d104c-a3ee-4859-aeb1-6cafe8cd194e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/solver.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day02.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
@@ -24,20 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="348">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day02.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="140">
+              <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
               <folding>
                 <element signature="e#544#545#0" expanded="true" />
                 <element signature="e#603#604#0" expanded="true" />
@@ -68,14 +66,15 @@
         <option value="$PROJECT_DIR$/src/day02.r.rs" />
         <option value="$PROJECT_DIR$/src/day01.rs" />
         <option value="$PROJECT_DIR$/src/solver.rs" />
-        <option value="$PROJECT_DIR$/src/main.rs" />
+        <option value="$USER_HOME$/test-home-assistant/configuration.yaml" />
         <option value="$PROJECT_DIR$/src/day02.rs" />
+        <option value="$PROJECT_DIR$/src/main.rs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1680" />
     <option name="height" value="981" />
   </component>
   <component name="ProjectView">
@@ -124,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Run advent2018">
+  <component name="RunManager" selected="Cargo Command.Test day02">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -167,9 +166,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day02::calc_checksum_tests::single_line_no_two_or_threes_checksum_should_be_zero" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day02::calc_checksum_tests::single_line_no_two_or_threes_checksum_should_be_zero -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -177,9 +176,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test solve_part_two_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day02::solve_part_two_tests" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -213,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo Command.Run advent2018" />
         <item itemvalue="Cargo Command.Test day02" />
+        <item itemvalue="Cargo Command.Test solve_part_two_tests" />
+        <item itemvalue="Cargo Command.Run advent2018" />
         <item itemvalue="Cargo Command.Test day02::calc_checksum_tests::problem_example_test" />
         <item itemvalue="Cargo Command.Test day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero" />
-        <item itemvalue="Cargo Command.Test day02::calc_checksum_tests::single_line_no_two_or_threes_checksum_should_be_zero" />
       </list>
     </recent_temporary>
   </component>
@@ -242,57 +241,57 @@
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
       <workItem from="1544322539333" duration="14725000" />
-      <workItem from="1545124547227" duration="20909000" />
+      <workItem from="1545124547227" duration="28504000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day02 - 2018.12.19 at 23h 13m 50s.xml">
+    <history-entry file="Test_solve_part_two_tests - 2018.12.27 at 20h 58m 23s.xml">
+      <configuration name="Test solve_part_two_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 20h 58m 36s.xml">
       <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_day02__count_repeats_test__multiple_letters_appear_three_times_but_only_counts_once - 2018.12.19 at 23h 14m 31s.xml">
-      <configuration name="Test day02::count_repeats_test::multiple_letters_appear_three_times_but_only_counts_once" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_count_repeats_test - 2018.12.19 at 23h 14m 36s.xml">
-      <configuration name="Test count_repeats_test" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_count_repeats_test - 2018.12.19 at 23h 15m 00s.xml">
-      <configuration name="Test count_repeats_test" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day02__calc_checksum_tests__no_lines_should_be_zero_checksum - 2018.12.19 at 23h 19m 57s.xml">
-      <configuration name="Test day02::calc_checksum_tests::no_lines_should_be_zero_checksum" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day02__calc_checksum_tests__single_line_no_two_or_threes_checksum_should_be_zero - 2018.12.19 at 23h 21m 07s.xml">
-      <configuration name="Test day02::calc_checksum_tests::single_line_no_two_or_threes_checksum_should_be_zero" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day02__calc_checksum_tests__single_line_with_one_two_checksum_should_be_zero - 2018.12.19 at 23h 22m 04s.xml">
-      <configuration name="Test day02::calc_checksum_tests::single_line_with_one_two_checksum_should_be_zero" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day02__calc_checksum_tests__problem_example_test - 2018.12.19 at 23h 23m 30s.xml">
-      <configuration name="Test day02::calc_checksum_tests::problem_example_test" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day02 - 2018.12.19 at 23h 32m 03s.xml">
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 27m 39s.xml">
       <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_day02 - 2018.12.19 at 23h 35m 31s.xml">
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 28m 25s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 28m 45s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 31m 07s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 32m 58s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 36m 53s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 37m 14s.xml">
+      <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day02 - 2018.12.27 at 22h 39m 18s.xml">
       <configuration name="Test day02" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38854000" />
+    <option name="totallyTimeSpent" value="46449000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="981" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22832723" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17032968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3456925" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38209608" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day01.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-112">
@@ -374,16 +366,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/test-home-assistant/configuration.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day02.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="140">
+          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
           <folding>
             <element signature="e#544#545#0" expanded="true" />
             <element signature="e#603#604#0" expanded="true" />
             <element signature="e#1554#1555#0" expanded="true" />
             <element signature="e#1581#1582#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>

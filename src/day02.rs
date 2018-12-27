@@ -86,7 +86,53 @@ mod calc_checksum_tests {
 
 }
 
+fn split_input_lines(input: &String) -> Vec<&str> {
+    input.split("\n").map(str::trim).filter(|s| !s.is_empty()).collect()
+}
+
 pub fn solve_part_one(input: &String) -> String {
-    let lines: Vec<&str> = input.split("\n").map(str::trim).collect();
+    let lines: Vec<&str> = split_input_lines(input);
     format!("{}", calc_checksum(&lines))
+}
+
+
+
+pub fn solve_part_two(input: &String) -> String {
+    let lines: &Vec<&str> = &split_input_lines(input);
+
+    let default_sim = &String::new();
+    let mut most_similar = String::new();
+
+    // terrible O(n^2 * l) complexity algo here
+    for s in lines {
+        for oth in lines {
+            if s != oth {
+                let mut sim = default_sim.clone();
+
+                for i in 0..s.len() {
+                    if s.get(i..i+1).unwrap() == oth.get(i..i+1).unwrap() {
+                        sim.push_str(s.get(i..i+1).unwrap());
+                    }
+                }
+//                println!("{}:{} -> {:?}", s, oth, sim);
+                if most_similar.len() < sim.len() {
+                    most_similar.truncate(0);
+                    most_similar.push_str(sim.clone().as_str())
+                }
+            }
+        }
+    }
+
+    most_similar
+}
+
+
+#[cfg(test)]
+mod solve_part_two_tests {
+    use super::*;
+
+    #[test]
+    fn acceptance_test() {
+        assert_eq!(solve_part_two(&String::from("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz\n")), "fgij")
+    }
 }
