@@ -1,10 +1,13 @@
 extern crate core;
+extern crate regex;
+#[macro_use] extern crate lazy_static;
 
 use std::env;
 
 mod fetch;
 mod day01;
 mod day02;
+mod day03;
 
 fn main() {
     eprintln!("\n*** Advent 2018 w/ Rust Bootstrap and Solver Tool ***");
