@@ -1,11 +1,12 @@
 use regex::Regex;
 use std::str::FromStr;
+use std::collections::HashSet;
 
 fn split_input_lines(input: &String) -> Vec<&str> {
     input.split("\n").map(str::trim).filter(|s| !s.is_empty()).collect()
 }
 
-#[derive(Debug)]
+#[derive(PartialEq, Eq, Debug)]
 struct RectangleDescriptor {
     id: String,
     pos_left: usize,
@@ -14,16 +15,40 @@ struct RectangleDescriptor {
     size_y: usize
 }
 
-impl PartialEq for RectangleDescriptor {
-    fn eq(&self, other: &RectangleDescriptor) -> bool {
-        self.id == other.id &&
-            self.pos_left == other.pos_left &&
-            self.pos_top == other.pos_top &&
-            self.size_x == other.size_x &&
-            self.size_y == other.size_y
+impl RectangleDescriptor {
+    fn squares(&self) -> HashSet<(usize,usize)> {
+        let mut expected_squares: HashSet<(usize,usize)> = HashSet::new();
+        for r in self.pos_top .. (self.pos_top + self.size_y) {
+            for c in self.pos_left .. (self.pos_left + self.size_x) {
+                expected_squares.insert((r, c));
+            }
+        }
+        expected_squares
     }
 }
 
+#[cfg(test)]
+mod squares_for_rectangle_tests {
+    use super::*;
+
+    #[test]
+    fn squares_for_examples_test() {
+        let example_one_rect = RectangleDescriptor {
+            id: String::from("1"),
+            pos_left: 1,
+            pos_top: 3,
+            size_x: 4,
+            size_y: 4
+        };
+        let expected_squares: HashSet<(usize,usize)> =
+            [(3, 1), (3, 2), (3, 3), (3, 4),
+                (4, 1), (4, 2), (4, 3), (4, 4),
+                (5, 1), (5, 2), (5, 3), (5, 4),
+                (6, 1), (6, 2), (6, 3), (6, 4)]
+                .iter().cloned().collect();
+        assert_eq!(example_one_rect.squares(), expected_squares);
+    }
+}
 
 fn parse_rectangle_descriptor(descriptor: &str) -> Result<RectangleDescriptor, String> {
     lazy_static! {
