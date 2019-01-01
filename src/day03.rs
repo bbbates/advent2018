@@ -1,25 +1,26 @@
 use regex::Regex;
 use std::str::FromStr;
 use std::collections::HashSet;
+use std::collections::HashMap;
 
 fn split_input_lines(input: &String) -> Vec<&str> {
     input.split("\n").map(str::trim).filter(|s| !s.is_empty()).collect()
 }
 
-#[derive(PartialEq, Eq, Debug, Clone)]
+#[derive(PartialEq, Eq, Debug, Clone, Hash)]
 struct RectangleDescriptor {
     id: String,
     pos_left: usize,
     pos_top: usize,
     size_x: usize,
-    size_y: usize
+    size_y: usize,
 }
 
 impl RectangleDescriptor {
-    fn squares(&self) -> HashSet<(usize,usize)> {
-        let mut expected_squares: HashSet<(usize,usize)> = HashSet::new();
-        for r in self.pos_top .. (self.pos_top + self.size_y) {
-            for c in self.pos_left .. (self.pos_left + self.size_x) {
+    fn squares(&self) -> HashSet<(usize, usize)> {
+        let mut expected_squares: HashSet<(usize, usize)> = HashSet::new();
+        for r in self.pos_top..(self.pos_top + self.size_y) {
+            for c in self.pos_left..(self.pos_left + self.size_x) {
                 expected_squares.insert((r, c));
             }
         }
@@ -38,9 +39,9 @@ mod squares_for_rectangle_tests {
             pos_left: 1,
             pos_top: 3,
             size_x: 4,
-            size_y: 4
+            size_y: 4,
         };
-        let expected_squares: HashSet<(usize,usize)> =
+        let expected_squares: HashSet<(usize, usize)> =
             [(3, 1), (3, 2), (3, 3), (3, 4),
                 (4, 1), (4, 2), (4, 3), (4, 4),
                 (5, 1), (5, 2), (5, 3), (5, 4),
@@ -58,11 +59,11 @@ fn parse_rectangle_descriptor(descriptor: &str) -> Result<RectangleDescriptor, S
     if RE.is_match(descriptor) {
         let cap = RE.captures(descriptor).unwrap();
         return Ok(RectangleDescriptor {
-           id: String::from(cap.get(1).unwrap().as_str()),
-           pos_left: usize::from_str(cap.get(2).unwrap().as_str()).unwrap(),
-           pos_top: usize::from_str(cap.get(3).unwrap().as_str()).unwrap(),
-           size_x: usize::from_str(cap.get(4).unwrap().as_str()).unwrap(),
-           size_y: usize::from_str(cap.get(5).unwrap().as_str()).unwrap()
+            id: String::from(cap.get(1).unwrap().as_str()),
+            pos_left: usize::from_str(cap.get(2).unwrap().as_str()).unwrap(),
+            pos_top: usize::from_str(cap.get(3).unwrap().as_str()).unwrap(),
+            size_x: usize::from_str(cap.get(4).unwrap().as_str()).unwrap(),
+            size_y: usize::from_str(cap.get(5).unwrap().as_str()).unwrap(),
         });
     } else {
         return Err(format!("Failed to parse rectangle descriptor: [{}]", descriptor));
@@ -80,14 +81,14 @@ mod parser_tests {
             pos_left: 1,
             pos_top: 3,
             size_x: 4,
-            size_y: 4
+            size_y: 4,
         });
         assert_eq!(parse_rectangle_descriptor("#1043 @ 674,568: 12x17").unwrap(), RectangleDescriptor {
             id: String::from("1043"),
             pos_left: 674,
             pos_top: 568,
             size_x: 12,
-            size_y: 17
+            size_y: 17,
         });
     }
 
@@ -106,15 +107,15 @@ pub fn solve_part_one(input: &String) -> String {
         .map(|line: &&str| {
             parse_rectangle_descriptor(line).expect(line).squares()
         })
-        .fold((HashSet::<(usize,usize)>::new(), HashSet::<(usize,usize)>::new()),
+        .fold((HashSet::<(usize, usize)>::new(), HashSet::<(usize, usize)>::new()),
               |(all_squares, dupes), squares| {
-            let new_dupes: HashSet<(usize,usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
-            let all_dupes: HashSet<(usize,usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
+                  let new_dupes: HashSet<(usize, usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
+                  let all_dupes: HashSet<(usize, usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
 
-            let new_all_squares: HashSet<(usize,usize)> = all_squares.union(&squares).map(|s| *s).collect();
+                  let new_all_squares: HashSet<(usize, usize)> = all_squares.union(&squares).map(|s| *s).collect();
 
-            (new_all_squares, all_dupes)
-        });
+                  (new_all_squares, all_dupes)
+              });
 
     dupes.len().to_string()
 }
@@ -133,32 +134,43 @@ mod part_one_tests {
 pub fn solve_part_two(input: &String) -> String {
     let lines = split_input_lines(input);
     println!("Split all lines...");
-    let rectangles = lines.iter()
+    let mut rectangles: Vec<RectangleDescriptor> = lines.iter()
         .map(|line| {
             parse_rectangle_descriptor(line).expect(line)
+        }).collect();
+    let mut squares = rectangles.iter().map(|r| r.squares());
+    let mut squares_and_rects = rectangles.iter().zip(squares)
+        .fold(HashMap::<&RectangleDescriptor, HashSet<(usize, usize)>>::new(), |mut acc, (rect, squares)| {
+            acc.insert(&rect, squares);
+            acc
         });
-    println!("Parsed all rectangles...");
-    let (_, all_dupes, rects_with_no_dupes) = rectangles
-        .fold((HashSet::<(usize,usize)>::new(), HashSet::<(usize,usize)>::new(), Vec::<RectangleDescriptor>::new()),
-              |(all_squares, dupes, mut recs_with_no_dupes), rectangle| {
-                  let squares = rectangle.squares();
-                  println!("Calc'd squares for #{}", rectangle.id);
-                  let new_dupes: HashSet<(usize,usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
-                  let all_dupes: HashSet<(usize,usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
-                  let new_all_squares: HashSet<(usize,usize)> = all_squares.union(&squares).map(|s| *s).collect();
 
-                  println!("Calc'd sets for #{}", rectangle.id);
+    let rectangles_count = squares_and_rects.len();
 
-                  if new_dupes.len() == 0 {
-                      println!("Rectangle #{} has no dupes yet...", rectangle.id);
-                      recs_with_no_dupes.push(rectangle)
-                  };
+    println!("Parsed all rectangles: {}", rectangles_count);
 
-                  (new_all_squares, all_dupes, recs_with_no_dupes)
-              });
+    for rect in rectangles.iter() {
+        println!("{}:", rect.id);
+        let rect_squares = squares_and_rects.get(rect).unwrap();
+        let mut has_overlap = false;
 
+        for other in rectangles.iter() {
+            let other_squares = squares_and_rects.get(other).unwrap();
 
-    rects_with_no_dupes.last().expect("What? No rectanble without dupes found?").id.to_string()
+            if rect != other && !rect_squares.is_disjoint(other_squares) {
+                println!("{}, {} -> overaps!", rect.id, other.id);
+                has_overlap = true;
+                break;
+            }
+        }
+
+        if !has_overlap {
+            println!("{} has no overlaps!", rect.id);
+            return rect.id.to_string();
+        }
+    }
+
+    String::from("Could not find Rectangle with no dupes!")
 }
 
 #[cfg(test)]
