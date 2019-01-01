@@ -6,7 +6,7 @@ fn split_input_lines(input: &String) -> Vec<&str> {
     input.split("\n").map(str::trim).filter(|s| !s.is_empty()).collect()
 }
 
-#[derive(PartialEq, Eq, Debug)]
+#[derive(PartialEq, Eq, Debug, Clone)]
 struct RectangleDescriptor {
     id: String,
     pos_left: usize,
@@ -57,7 +57,6 @@ fn parse_rectangle_descriptor(descriptor: &str) -> Result<RectangleDescriptor, S
 
     if RE.is_match(descriptor) {
         let cap = RE.captures(descriptor).unwrap();
-        println!("Parsed {}", descriptor);
         return Ok(RectangleDescriptor {
            id: String::from(cap.get(1).unwrap().as_str()),
            pos_left: usize::from_str(cap.get(2).unwrap().as_str()).unwrap(),
@@ -108,7 +107,7 @@ pub fn solve_part_one(input: &String) -> String {
             parse_rectangle_descriptor(line).expect(line).squares()
         })
         .fold((HashSet::<(usize,usize)>::new(), HashSet::<(usize,usize)>::new()),
-              |(mut all_squares, mut dupes), squares| {
+              |(all_squares, dupes), squares| {
             let new_dupes: HashSet<(usize,usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
             let all_dupes: HashSet<(usize,usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
 
@@ -129,5 +128,45 @@ mod part_one_tests {
     fn acceptance_tests() {
         assert_eq!(solve_part_one(&String::from("#1 @ 1,3: 4x4\n#2 @ 3,1: 4x4\n#3 @ 5,5: 2x2\n")), "4")
     }
+}
 
+pub fn solve_part_two(input: &String) -> String {
+    let lines = split_input_lines(input);
+    println!("Split all lines...");
+    let rectangles = lines.iter()
+        .map(|line| {
+            parse_rectangle_descriptor(line).expect(line)
+        });
+    println!("Parsed all rectangles...");
+    let (_, all_dupes, rects_with_no_dupes) = rectangles
+        .fold((HashSet::<(usize,usize)>::new(), HashSet::<(usize,usize)>::new(), Vec::<RectangleDescriptor>::new()),
+              |(all_squares, dupes, mut recs_with_no_dupes), rectangle| {
+                  let squares = rectangle.squares();
+                  println!("Calc'd squares for #{}", rectangle.id);
+                  let new_dupes: HashSet<(usize,usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
+                  let all_dupes: HashSet<(usize,usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
+                  let new_all_squares: HashSet<(usize,usize)> = all_squares.union(&squares).map(|s| *s).collect();
+
+                  println!("Calc'd sets for #{}", rectangle.id);
+
+                  if new_dupes.len() == 0 {
+                      println!("Rectangle #{} has no dupes yet...", rectangle.id);
+                      recs_with_no_dupes.push(rectangle)
+                  };
+
+                  (new_all_squares, all_dupes, recs_with_no_dupes)
+              });
+
+
+    rects_with_no_dupes.last().expect("What? No rectanble without dupes found?").id.to_string()
+}
+
+#[cfg(test)]
+mod part_two_tests {
+    use super::*;
+
+    #[test]
+    fn acceptance_tests() {
+        assert_eq!(solve_part_two(&String::from("#1 @ 1,3: 4x4\n#2 @ 3,1: 4x4\n#3 @ 5,5: 2x2\n")), "3")
+    }
 }

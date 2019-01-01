@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e4d104c-a3ee-4859-aeb1-6cafe8cd194e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/day03.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/day03.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+            <state relative-caret-position="397">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -34,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day03.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+            <state relative-caret-position="442">
+              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
             </state>
           </provider>
         </entry>
@@ -118,7 +117,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Test day03::parser_tests::parse_examples_successful">
+  <component name="RunManager" selected="Cargo Command.Test day03">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -141,9 +140,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day03::parser_tests::parse_examples_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day03::parser_tests::parse_examples_successful" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day03::parser_tests::parse_examples_fail -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day03::parser_tests::parse_examples_successful -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -151,9 +150,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day03::parser_tests::parse_examples_successful" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day03::part_two_tests::acceptance_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day03::parser_tests::parse_examples_successful -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day03::part_two_tests::acceptance_tests -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -171,9 +170,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test parser_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test part_two_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day03::parser_tests" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day03::part_two_tests" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -207,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_successful" />
         <item itemvalue="Cargo Command.Test day03" />
+        <item itemvalue="Cargo Command.Test day03::part_two_tests::acceptance_tests" />
+        <item itemvalue="Cargo Command.Test part_two_tests" />
+        <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_successful" />
         <item itemvalue="Cargo Command.Test day03::squares_for_rectangle_tests::squares_for_examples_test" />
-        <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_fail" />
-        <item itemvalue="Cargo Command.Test parser_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -236,32 +235,11 @@
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
       <workItem from="1544322539333" duration="14725000" />
-      <workItem from="1545124547227" duration="42221000" />
+      <workItem from="1545124547227" duration="49226000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 18m 18s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 27m 46s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03__squares_for_rectangle_tests__squares_for_examples_test - 2018.12.29 at 23h 34m 53s.xml">
-      <configuration name="Test day03::squares_for_rectangle_tests::squares_for_examples_test" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 35m 22s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 57m 12s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.30 at 00h 04m 38s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2019.01.01 at 14h 33m 36s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_day03 - 2019.01.01 at 14h 37m 14s.xml">
       <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -271,9 +249,30 @@
     <history-entry file="Test_day03__parser_tests__parse_examples_successful - 2019.01.01 at 14h 44m 21s.xml">
       <configuration name="Test day03::parser_tests::parse_examples_successful" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_day03__parser_tests__parse_examples_successful - 2019.01.01 at 14h 45m 09s.xml">
+      <configuration name="Test day03::parser_tests::parse_examples_successful" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_part_two_tests - 2019.01.01 at 15h 38m 45s.xml">
+      <configuration name="Test part_two_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03__part_two_tests__acceptance_tests - 2019.01.01 at 15h 39m 03s.xml">
+      <configuration name="Test day03::part_two_tests::acceptance_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 15h 39m 14s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 16h 51m 00s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 17h 13m 42s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 17h 23m 41s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60166000" />
+    <option name="totallyTimeSpent" value="67171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="980" extended-state="6" />
@@ -286,7 +285,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37663755" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38318777" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -383,15 +382,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        <state relative-caret-position="397">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day03.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+        <state relative-caret-position="442">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
         </state>
       </provider>
     </entry>
