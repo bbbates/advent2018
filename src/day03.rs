@@ -52,12 +52,12 @@ mod squares_for_rectangle_tests {
 
 fn parse_rectangle_descriptor(descriptor: &str) -> Result<RectangleDescriptor, String> {
     lazy_static! {
-        static ref RE: Regex = Regex::new(r"^#(\d+) @ (\d)+,(\d+): (\d+)x(\d+)").unwrap();
+        static ref RE: Regex = Regex::new(r"^#(\d+) @ (\d+),(\d+): (\d+)x(\d+)").unwrap();
     }
 
     if RE.is_match(descriptor) {
         let cap = RE.captures(descriptor).unwrap();
-
+        println!("Parsed {}", descriptor);
         return Ok(RectangleDescriptor {
            id: String::from(cap.get(1).unwrap().as_str()),
            pos_left: usize::from_str(cap.get(2).unwrap().as_str()).unwrap(),
@@ -83,6 +83,13 @@ mod parser_tests {
             size_x: 4,
             size_y: 4
         });
+        assert_eq!(parse_rectangle_descriptor("#1043 @ 674,568: 12x17").unwrap(), RectangleDescriptor {
+            id: String::from("1043"),
+            pos_left: 674,
+            pos_top: 568,
+            size_x: 12,
+            size_y: 17
+        });
     }
 
 
@@ -93,8 +100,24 @@ mod parser_tests {
 }
 
 
-pub fn solve_part_one(_input: &String) -> String {
-    String::from("4")
+pub fn solve_part_one(input: &String) -> String {
+    let lines = split_input_lines(input);
+    println!("Got line input -> {} lines", lines.len());
+    let (_, dupes) = lines.iter()
+        .map(|line: &&str| {
+            parse_rectangle_descriptor(line).expect(line).squares()
+        })
+        .fold((HashSet::<(usize,usize)>::new(), HashSet::<(usize,usize)>::new()),
+              |(mut all_squares, mut dupes), squares| {
+            let new_dupes: HashSet<(usize,usize)> = all_squares.intersection(&squares).map(|s| *s).collect();
+            let all_dupes: HashSet<(usize,usize)> = dupes.union(&new_dupes).map(|s| *s).collect();
+
+            let new_all_squares: HashSet<(usize,usize)> = all_squares.union(&squares).map(|s| *s).collect();
+
+            (new_all_squares, all_dupes)
+        });
+
+    dupes.len().to_string()
 }
 
 

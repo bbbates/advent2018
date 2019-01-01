@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e4d104c-a3ee-4859-aeb1-6cafe8cd194e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/day03.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/day03.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,23 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day02.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="116" column="41" lean-forward="true" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
-              <folding>
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#1554#1555#0" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="359">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -48,12 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day03.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#1904#1905#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -136,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Test day03">
+  <component name="RunManager" selected="Cargo Command.Test day03::parser_tests::parse_examples_successful">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -225,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_successful" />
         <item itemvalue="Cargo Command.Test day03" />
         <item itemvalue="Cargo Command.Test day03::squares_for_rectangle_tests::squares_for_examples_test" />
         <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_fail" />
         <item itemvalue="Cargo Command.Test parser_tests" />
-        <item itemvalue="Cargo Command.Test day03::parser_tests::parse_examples_successful" />
       </list>
     </recent_temporary>
   </component>
@@ -254,23 +236,11 @@
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
       <workItem from="1544322539333" duration="14725000" />
-      <workItem from="1545124547227" duration="36159000" />
+      <workItem from="1545124547227" duration="42221000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day03 - 2018.12.29 at 22h 39m 17s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 13m 50s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03 - 2018.12.29 at 23h 14m 07s.xml">
-      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day03__parser_tests__parse_examples_fail - 2018.12.29 at 23h 18m 12s.xml">
-      <configuration name="Test day03::parser_tests::parse_examples_fail" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_day03 - 2018.12.29 at 23h 18m 18s.xml">
       <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -289,22 +259,34 @@
     <history-entry file="Test_day03 - 2018.12.30 at 00h 04m 38s.xml">
       <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 14h 33m 36s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 14h 37m 14s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03 - 2019.01.01 at 14h 38m 27s.xml">
+      <configuration name="Test day03" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day03__parser_tests__parse_examples_successful - 2019.01.01 at 14h 44m 21s.xml">
+      <configuration name="Test day03::parser_tests::parse_examples_successful" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54104000" />
+    <option name="totallyTimeSpent" value="60166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17032968" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17032968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31113538" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37663755" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day02.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -406,14 +381,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day03.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#1928#1929#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="92">
+          <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
         </state>
       </provider>
     </entry>

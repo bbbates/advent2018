@@ -26,7 +26,7 @@ fn main() {
 
 
     if day_part_input == "1" {
-        println!("{}", day02::solve_part_one(&problem_input));
+        println!("{}", day03::solve_part_one(&problem_input));
     } else {
         println!("{}", day02::solve_part_two(&problem_input));
     }
