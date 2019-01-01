@@ -5,8 +5,6 @@ extern crate regex;
 use std::env;
 
 mod fetch;
-mod day01;
-mod day02;
 mod day03;
 
 fn main() {

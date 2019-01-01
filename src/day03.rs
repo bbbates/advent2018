@@ -134,12 +134,12 @@ mod part_one_tests {
 pub fn solve_part_two(input: &String) -> String {
     let lines = split_input_lines(input);
     println!("Split all lines...");
-    let mut rectangles: Vec<RectangleDescriptor> = lines.iter()
+    let rectangles: Vec<RectangleDescriptor> = lines.iter()
         .map(|line| {
             parse_rectangle_descriptor(line).expect(line)
         }).collect();
-    let mut squares = rectangles.iter().map(|r| r.squares());
-    let mut squares_and_rects = rectangles.iter().zip(squares)
+    let squares = rectangles.iter().map(|r| r.squares());
+    let squares_and_rects = rectangles.iter().zip(squares)
         .fold(HashMap::<&RectangleDescriptor, HashSet<(usize, usize)>>::new(), |mut acc, (rect, squares)| {
             acc.insert(&rect, squares);
             acc
