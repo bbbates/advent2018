@@ -6,6 +6,7 @@ extern crate chrono;
 use std::env;
 
 mod fetch;
+mod parse;
 mod day04;
 
 fn main() {
