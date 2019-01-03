@@ -1,11 +1,12 @@
 extern crate core;
 extern crate regex;
+extern crate chrono;
 #[macro_use] extern crate lazy_static;
 
 use std::env;
 
 mod fetch;
-mod day03;
+mod day04;
 
 fn main() {
     eprintln!("\n*** Advent 2018 w/ Rust Bootstrap and Solver Tool ***");
@@ -24,9 +25,9 @@ fn main() {
 
 
     if day_part_input == "1" {
-        println!("{}", day03::solve_part_one(&problem_input));
+        println!("{}", day04::solve_part_one(&problem_input));
     } else {
-        println!("{}", day03::solve_part_two(&problem_input));
+        println!("{}", day04::solve_part_two(&problem_input));
     }
 
 }
