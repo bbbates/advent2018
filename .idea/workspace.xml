@@ -42,11 +42,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day04.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="378">
+              <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
               <folding>
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
+                <element signature="e#4481#4482#0" expanded="true" />
+                <element signature="e#4504#4505#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Test day04">
+  <component name="RunManager" selected="Cargo Command.Test guard_event_tests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -175,9 +175,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test guard_event_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day04::guard_event_tests::parse_sleep_event" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests::parse_sleep_event -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -185,9 +185,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test part_one_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test guard_event_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day04::part_one_tests" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -221,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo Command.Test day04" />
-        <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_invalid_event_should_produce_err_result" />
         <item itemvalue="Cargo Command.Test guard_event_tests" />
+        <item itemvalue="Cargo Command.Test day04" />
         <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_begin_shift_guard_event" />
-        <item itemvalue="Cargo Command.Test part_one_tests" />
+        <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_sleep_event" />
+        <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_invalid_event_should_produce_err_result" />
       </list>
     </recent_temporary>
   </component>
@@ -250,32 +250,11 @@
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
       <workItem from="1544322539333" duration="14725000" />
-      <workItem from="1545124547227" duration="65792000" />
+      <workItem from="1545124547227" duration="68728000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day04 - 2019.01.03 at 13h 12m 19s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.03 at 13h 13m 33s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.03 at 14h 32m 20s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.03 at 14h 32m 49s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.03 at 14h 35m 06s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.03 at 14h 37m 26s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.04 at 14h 00m 21s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_day04 - 2019.01.04 at 14h 01m 41s.xml">
       <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -285,9 +264,30 @@
     <history-entry file="Test_day04 - 2019.01.04 at 14h 14m 55s.xml">
       <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_day04__guard_event_tests__parse_begin_shift_guard_event - 2019.01.04 at 14h 15m 28s.xml">
+      <configuration name="Test day04::guard_event_tests::parse_begin_shift_guard_event" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04__guard_event_tests__parse_invalid_event_should_produce_err_result - 2019.01.04 at 14h 17m 39s.xml">
+      <configuration name="Test day04::guard_event_tests::parse_invalid_event_should_produce_err_result" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04__guard_event_tests__parse_sleep_event - 2019.01.04 at 15h 11m 12s.xml">
+      <configuration name="Test day04::guard_event_tests::parse_sleep_event" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04__guard_event_tests__parse_begin_shift_guard_event - 2019.01.04 at 15h 11m 53s.xml">
+      <configuration name="Test day04::guard_event_tests::parse_begin_shift_guard_event" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.04 at 15h 27m 51s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.04 at 15h 33m 15s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_guard_event_tests - 2019.01.04 at 15h 33m 59s.xml">
+      <configuration name="Test guard_event_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83737000" />
+    <option name="totallyTimeSpent" value="86673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1680" height="980" extended-state="6" />
@@ -412,11 +412,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day04.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="378">
+          <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
           <folding>
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
+            <element signature="e#4481#4482#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
           </folding>
         </state>
       </provider>
