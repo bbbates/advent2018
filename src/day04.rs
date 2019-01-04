@@ -23,13 +23,16 @@ impl GuardEvent {
 
         if RE.is_match(record_text) {
             let cap = RE.captures(record_text).unwrap();
-            println!("{:?}", cap);
-            return Ok(GuardEvent::BeginShift(
-                GuardRecord {
-                    ts: NaiveDate::from_ymd(2016, 7, 8).and_hms(0, 0, 0),
-                    guard: String::from("100"),
-                }
-            ));
+
+            match NaiveDateTime::parse_from_str(cap.get(1).unwrap().as_str(), "%Y-%m-%d %H:%M") {
+                Ok(dt) => Ok(GuardEvent::BeginShift(
+                    GuardRecord {
+                        ts: NaiveDateTime::parse_from_str(cap.get(1).unwrap().as_str(), "%Y-%m-%d %H:%M").unwrap(),
+                        guard: String::from(cap.get(6).unwrap().as_str())
+                    }
+                )),
+                Err(e) => Err(format!("Could not parse guard event '{}'", record_text).to_string())
+            }
         } else {
             return Err(format!("Could not parse guard event '{}'", record_text).to_string());
         }
@@ -47,6 +50,15 @@ mod guard_event_tests {
             ts: NaiveDate::from_ymd(1518, 11, 1).and_hms(0, 0, 0),
             guard: String::from("10")
         }));
+    }
+
+    #[test]
+    fn parse_invalid_event_should_produce_err_result() {
+        assert_eq!(GuardEvent::parse("[1518-13-01 00:00] Guard #10 begins shift"),
+                   Err(String::from("Could not parse guard event '[1518-13-01 00:00] Guard #10 begins shift'")));
+
+        assert_eq!(GuardEvent::parse("[1518-11-01 00:00] Gah, not an event!"),
+                   Err(String::from("Could not parse guard event '[1518-11-01 00:00] Gah, not an event!'")));
     }
 }
 
