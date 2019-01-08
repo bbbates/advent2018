@@ -42,11 +42,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day04.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="161" column="11" selection-start-line="161" selection-start-column="11" selection-end-line="161" selection-end-column="11" />
+            <state relative-caret-position="171">
+              <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
               <folding>
-                <element signature="e#7545#7546#0" expanded="true" />
-                <element signature="e#7568#7569#0" expanded="true" />
+                <element signature="e#5800#5801#0" expanded="true" />
+                <element signature="e#5837#5838#0" expanded="true" />
+                <element signature="e#9419#9420#0" expanded="true" />
+                <element signature="e#9442#9443#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,6 +62,12 @@
         <option value="Rust File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>parse_g</find>
+      <find>record</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,9 +174,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test day04::guard_event_tests::parse_sleep_event" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test day04::guard_event_tests::parse_wakeup_event" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests::parse_sleep_event -- --exact" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests::parse_wakeup_event -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -186,9 +194,9 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test guard_event_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+    <configuration name="Test message_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package advent2018 --bin advent2018 day04::guard_event_tests" />
+      <option name="command" value="test --package advent2018 --bin advent2018 day04::message_tests" />
       <option name="allFeatures" value="false" />
       <option name="nocapture" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -223,10 +231,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cargo Command.Test day04" />
-        <item itemvalue="Cargo Command.Test day04::part_one_tests::acceptance_test" />
-        <item itemvalue="Cargo Command.Test guard_event_tests" />
         <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_begin_shift_guard_event" />
-        <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_sleep_event" />
+        <item itemvalue="Cargo Command.Test day04::guard_event_tests::parse_wakeup_event" />
+        <item itemvalue="Cargo Command.Test message_tests" />
+        <item itemvalue="Cargo Command.Test day04::part_one_tests::acceptance_test" />
       </list>
     </recent_temporary>
   </component>
@@ -251,29 +259,11 @@
       <workItem from="1543718399593" duration="236000" />
       <workItem from="1543921445007" duration="2842000" />
       <workItem from="1544322539333" duration="14725000" />
-      <workItem from="1545124547227" duration="86680000" />
+      <workItem from="1545124547227" duration="95307000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_day04 - 2019.01.07 at 21h 59m 16s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.07 at 22h 21m 38s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.07 at 22h 33m 13s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.07 at 22h 36m 42s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.07 at 22h 46m 52s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_day04 - 2019.01.07 at 22h 52m 41s.xml">
-      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_day04 - 2019.01.07 at 22h 54m 03s.xml">
       <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -286,9 +276,27 @@
     <history-entry file="Test_day04 - 2019.01.07 at 23h 02m 17s.xml">
       <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_message_tests - 2019.01.08 at 21h 15m 44s.xml">
+      <configuration name="Test message_tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.08 at 23h 26m 29s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04__guard_event_tests__parse_begin_shift_guard_event - 2019.01.08 at 23h 30m 03s.xml">
+      <configuration name="Test day04::guard_event_tests::parse_begin_shift_guard_event" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.08 at 23h 34m 30s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.08 at 23h 35m 00s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_day04 - 2019.01.08 at 23h 35m 26s.xml">
+      <configuration name="Test day04" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104625000" />
+    <option name="totallyTimeSpent" value="113252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1680" height="980" extended-state="0" />
@@ -301,7 +309,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19541484" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37336245" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -404,13 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/result.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-902">
-          <caret line="1078" column="29" selection-start-line="1078" selection-start-column="29" selection-end-line="1078" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -418,13 +419,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/libcore/result.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="804" selection-start-line="804" selection-end-line="804" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day04.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="161" column="11" selection-start-line="161" selection-start-column="11" selection-end-line="161" selection-end-column="11" />
+        <state relative-caret-position="171">
+          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
           <folding>
-            <element signature="e#7545#7546#0" expanded="true" />
-            <element signature="e#7568#7569#0" expanded="true" />
+            <element signature="e#5800#5801#0" expanded="true" />
+            <element signature="e#5837#5838#0" expanded="true" />
+            <element signature="e#9419#9420#0" expanded="true" />
+            <element signature="e#9442#9443#0" expanded="true" />
           </folding>
         </state>
       </provider>
