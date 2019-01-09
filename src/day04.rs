@@ -159,7 +159,7 @@ fn guard_with_most_times_asleep(sleep_times: &GuardSleepRanges) -> (String, &Vec
     (guard.to_string(), &sleep_ranges.clone())
 }
 
-fn minute_most_asleep(sleep_ranges: &Vec<Range<u32>>) -> u32 {
+fn minute_most_asleep(sleep_ranges: &Vec<Range<u32>>) -> (u32,u32) {
     let mut minute_counts = HashMap::<u32, u32>::new();
     for range in sleep_ranges.iter() {
         let r: Vec<u32> = range.clone().collect();
@@ -168,7 +168,12 @@ fn minute_most_asleep(sleep_ranges: &Vec<Range<u32>>) -> u32 {
             *ctr += 1;
         }
     }
-    *minute_counts.iter().max_by_key(|c| { (*c).1 }).unwrap().0
+    let max = minute_counts.iter()
+        .max_by_key(|c| { (*c).1 });
+    match max {
+        Some((minute, count)) => (minute.clone(), count.clone()),
+        None => (0, 0)
+    }
 }
 
 #[derive(PartialEq, PartialOrd, Eq, Clone, Debug)]
@@ -231,14 +236,20 @@ mod message_tests {
 
 
 pub fn solve_part_one(input: &String) -> String {
+    let guard_events = lines_to_guard_events(input);
+    let sleep_times = guard_sleep_times(&guard_events);
+    let (guard, sleep_ranges) = guard_with_most_times_asleep(&sleep_times);
+    let (minute_most_slept_during, _) = minute_most_asleep(sleep_ranges);
+    (u32::from_str(&guard).unwrap() * minute_most_slept_during).to_string()
+}
+
+fn lines_to_guard_events(input: &String) -> Vec<GuardEvent> {
     let lines = parse::split_input_lines(input);
     let mut messages: Vec<Message> =
         lines.iter().map(|line| {
             Message::parse(line).expect(format!("Could not parse guard event! '{}'", line).as_str())
         }).collect();
-
     messages.sort();
-
     println!("{:?}", messages.iter().take(10));
     let guard_events = messages.iter().fold(Vec::<GuardEvent>::new(), |mut events, message| {
         let event = match events.last() {
@@ -253,22 +264,14 @@ pub fn solve_part_one(input: &String) -> String {
         events.push(event);
         events
     });
-
-    let sleep_times = guard_sleep_times(&guard_events);
-    let (guard, sleep_ranges) = guard_with_most_times_asleep(&sleep_times);
-
-    let minute_most_slept_during = minute_most_asleep(sleep_ranges);
-
-    (u32::from_str(&guard).unwrap() * minute_most_slept_during).to_string()
+    guard_events
 }
 
 #[cfg(test)]
-mod part_one_tests {
+mod example_tests {
     use super::*;
 
-    #[test]
-    fn acceptance_test() {
-        let input = "[1518-11-01 00:00] Guard #10 begins shift
+    const INPUT: &str = "[1518-11-01 00:00] Guard #10 begins shift
 [1518-11-01 00:05] falls asleep
 [1518-11-01 00:25] wakes up
 [1518-11-01 00:30] falls asleep
@@ -286,11 +289,34 @@ mod part_one_tests {
 [1518-11-05 00:45] falls asleep
 [1518-11-05 00:55] wakes up";
 
-        assert_eq!(solve_part_one(&String::from(input)), "240");
+    #[test]
+    fn part_one_acceptance_test() {
+        assert_eq!(solve_part_one(&String::from(INPUT)), "240");
     }
+
+    #[test]
+    fn part_two_acceptance_test() {
+        assert_eq!(solve_part_two(&String::from(INPUT)), "4455");
+    }
+
+}
+
+fn minute_most_asleep_for_guard(sleep_times: GuardSleepRanges) -> (String, u32) {
+    let mut guard_to_minute_most_asleep: Vec<(String, u32, u32)> = sleep_times.iter()
+        .map(|(guard, times)| {
+            let asleep = minute_most_asleep(times);
+            (guard.to_string(), asleep.0, asleep.1)
+    }).collect();
+    guard_to_minute_most_asleep.sort_by_key(|k| { k.2 });
+    let (guard_most_asleep, minute, _) = guard_to_minute_most_asleep.iter().last().expect("No guard found!");
+    (guard_most_asleep.clone(), minute.clone())
 }
 
 
-pub fn solve_part_two(_input: &String) -> String {
-    String::from("")
+pub fn solve_part_two(input: &String) -> String {
+    let guard_events = lines_to_guard_events(input);
+    let sleep_times = guard_sleep_times(&guard_events);
+    let (guard_id, most_frequent_minute) = minute_most_asleep_for_guard(sleep_times);
+
+    (u32::from_str(guard_id.as_str()).unwrap() * most_frequent_minute).to_string()
 }
