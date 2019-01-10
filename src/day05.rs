@@ -1,30 +1,5 @@
-
 pub fn solve_part_one(input: &String) -> String {
-    let mut letters = input.trim().chars().collect::<Vec<char>>();
-
-    let mut ptr = 0;
-    loop {
-        let first = letters[ptr];
-        let second = letters[ptr+1];
-
-        println!("{} <=> {}", first, second);
-
-        if is_reaction(&first, &second) {
-            letters.remove(ptr);
-            letters.remove(ptr);
-            if ptr != 0 { ptr -= 1 };
-            println!("REACTION! {} <=> {}", first, second);
-        } else {
-            ptr += 1;
-        }
-
-        println!("PTR>>{}/{}", ptr, letters.len());
-
-        match letters.get(ptr+1) {
-            Some(_) => {},
-            None => break
-        }
-    }
+    let letters = react_polymer(input);
 
     println!("{:?}", letters);
 
@@ -87,6 +62,55 @@ mod is_reaction_tests {
 }
 
 
-pub fn solve_part_two(_input: &String) -> String {
-    String::from("")
+pub fn solve_part_two(input: &String) -> String {
+    let after_initial_reaction = react_polymer(input).iter().map(|c| *c).collect::<String>();
+    let units: Vec<char> = "abcdefghijklmnopqrstuvwxyz".chars().collect();
+
+    let with_units_removed = units.iter().map(|c| {
+        let with_unit_removed =
+            after_initial_reaction
+                .replace(&c.to_string(), "")
+                .replace(&c.to_ascii_uppercase().to_string(), "");
+        react_polymer(&with_unit_removed).len()
+    });
+
+    with_units_removed.min().unwrap().to_string()
+}
+
+#[cfg(test)]
+mod part_two_tests {
+    use super::*;
+
+    #[test]
+    fn two_letter_polymer_with_reaction_leaves_nothing() {
+        assert_eq!(solve_part_two(&String::from("dabAcCaCBAcCcaDA")), "4");
+    }
+}
+
+fn react_polymer(input: &String) -> Vec<char> {
+    let mut letters = input.trim().chars().collect::<Vec<char>>();
+    let mut ptr = 0;
+    loop {
+        let first = letters[ptr];
+        let second = letters[ptr + 1];
+
+//        println!("{} <=> {}", first, second);
+
+        if is_reaction(&first, &second) {
+            letters.remove(ptr);
+            letters.remove(ptr);
+            if ptr != 0 { ptr -= 1 };
+//            println!("REACTION! {} <=> {}", first, second);
+        } else {
+            ptr += 1;
+        }
+
+//        println!("PTR>>{}/{}", ptr, letters.len());
+
+        match letters.get(ptr + 1) {
+            Some(_) => {}
+            None => break
+        }
+    }
+    letters
 }
