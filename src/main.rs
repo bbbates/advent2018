@@ -7,7 +7,7 @@ use std::env;
 
 mod fetch;
 mod parse;
-mod day04;
+mod day045
 
 fn main() {
     eprintln!("\n*** Advent 2018 w/ Rust Bootstrap and Solver Tool ***");
@@ -26,9 +26,9 @@ fn main() {
 
 
     if day_part_input == "1" {
-        println!("{}", day04::solve_part_one(&problem_input));
+        println!("{}", day05::solve_part_one(&problem_input));
     } else {
-        println!("{}", day04::solve_part_two(&problem_input));
+        println!("{}", day05::solve_part_two(&problem_input));
     }
 
 }
